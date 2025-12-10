@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>当選者情報入力フォーム - Kawasaki ZX-4RR</title>
+  <style>
+    body { font-family: sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { text-align: center; }
+    label { font-weight: bold; display: block; margin-top: 15px; }
+    input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; }
+    button { margin-top: 20px; width: 100%; padding: 12px; background: #009639; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
+    button:hover { background: #007a2d; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>当選者情報入力フォーム</h1>
+    <p>Kawasaki ZX-4RR プレゼントキャンペーン</p>
+
+    <form>
+      <label>お名前</label>
+      <input type="text" name="name" required />
+
+      <label>メールアドレス</label>
+      <input type="email" name="email" required />
+
+      <label>電話番号</label>
+      <input type="tel" name="phone" required />
+
+      <label>住所</label>
+      <textarea name="address" rows="3" required></textarea>
+
+      <label>ご希望の受取店舗</label>
+      <input type="text" name="shop" placeholder="例：〇〇県 〇〇市 Kawasaki正規販売店" required />
+
+      <label>本人確認書類の種類</label>
+      <select name="id_type" required>
+        <option value="">選択してください</option>
+        <option value="license">運転免許証</option>
+        <option value="my_number">マイナンバーカード</option>
+        <option value="passport">パスポート</option>
+      </select>
+
+      <label>本人確認書類番号</label>
+      <input type="text" name="id_number" required />
+
+      <button type="submit">送信する</button>
+    </form>
+  </div>
+</body>
+</html>
